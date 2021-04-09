@@ -1,0 +1,7 @@
+{
+    "todos": [
+        {"title": "First Todo", "content": "This is my First Todo"},
+        {"title": "Second Todo", "content": "This is my Second Todo"},
+        {"title": "Third Todo", "content": "This is my Third Todo"}
+    ]
+}
