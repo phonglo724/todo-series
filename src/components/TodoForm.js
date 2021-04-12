@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 
+const initialState = {
+    title: "",
+    content: ""
+}
+
 export default class TodoForm extends Component {
 
-    state = {
-        title: "",
-        content: ""
-    }
+    state = initialState
 
     handleChange = (event) => {
         this.setState({
@@ -13,9 +15,15 @@ export default class TodoForm extends Component {
         })
     }
 
+    handleSubmit = (event) => {
+        event.preventDefault()
+        this.props.addTodo(this.state)
+        this.setState(initialState)
+    }
+
     render() {
         return (
-            <form className="todo-form">
+            <form onSubmit={this.handleSubmit} className="todo-form">
                 <h2>New Todo Form</h2>
                 <label>Title</label>
                 <input 

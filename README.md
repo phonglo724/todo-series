@@ -1,3 +1,15 @@
+# NOTES
+
+In App.js, on line 26 that says 
+
+    <TodoContainer todos={this.state.todos} />
+
+essentially means the function TodoContainer is being invoked and an object is being passed into that function. In that object, there's a key of todo that's an array of those todo items (value). Like so:
+
+    TodoContainer({
+        todos: [{}, {}, {}]
+    })
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
